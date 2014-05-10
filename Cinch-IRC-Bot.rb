@@ -18,8 +18,8 @@ require "open-uri"							# Moduł open-uri wymagany przez bota
 require "rubygems"							# Moudł rubygems wymagany przez bota
 require "wolfram"							# Moduł wolfram wymagany przez bota
 
-BOT_FILE		 = open("bot.json")			# Plik .json, z którego będą odczytywane wszystkie opcje
-BOT_PARSED		 = JSON.parse(BOT_FILE.read)
+BOT_FILE	 = open("bot.json")			# Plik .json, z którego będą odczytywane wszystkie opcje
+BOT_PARSED	 = JSON.parse(BOT_FILE.read)
 
 # Wymagana rejestracja http://products.wolframalpha.com/api/ aby je uzyskać:
 Wolfram.appid    = BOT_PARSED["Wolfram"]["ID"]
@@ -42,7 +42,7 @@ PORT             = BOT_PARSED["Config"]["Port"]
 # Testing - "true" oznacza wejście bota na testowy kanał, false - wejście bota na prawdziwy kanał:
 TESTING          = BOT_PARSED["Config"]["Testing"]
 # Autorejoin - "true" oznacza, że po wyrzuceniu bota, będzie on po krótkiej chwili ponownie dołączać do czatu:
-AUTOREJOIN	 	 = BOT_PARSED["Config"]["Autorejoin"]
+AUTOREJOIN	 = BOT_PARSED["Config"]["Autorejoin"]
 # Definiuje host serwera. Wpisujesz go w formacie irc.tld lub irc.irc.tld:
 SERVER_NAME      = BOT_PARSED["Config"]["Host"]
 
