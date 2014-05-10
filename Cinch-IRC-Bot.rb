@@ -1,3 +1,15 @@
+# Licencja - BSD:
+# Tekst licencji:
+# 	Copyright (C) 2014, Linux_Shines/Shiny
+# 	Wszystkie prawa zastrzeżone.
+# 	Redystrybucja i używanie, czy to w formie kodu źródłowego, czy w formie kodu wykonawczego, są dozwolone pod warunkiem spełnienia poniższych warunków:
+# 		Redystrybucja kodu źródłowego musi zawierać powyższą notę dotyczącą praw autorskich, niniejszą listę warunków oraz poniższe oświadczenie o wyłączeniu odpowiedzialności.
+# 		Redystrybucja kodu wykonawczego musi zawierać powyższą notę dotyczącą praw autorskich, niniejszą listę warunków oraz poniższe oświadczenie o wyłączeniu odpowiedzialności w dokumentacji i/lub w w innych materiałach dostarczanych wraz z kopią oprogramowania.
+# 		Ani nazwa 'Ruby-Cinch-IRC-Bot', ani nazwa 'Ruby Cinch IRC Bot' nie mogą być użyte celem sygnowania lub promowania produktów pochodzących od tego oprogramowania, bez szczególnego, wyrażonego na piśmie ich zezwolenia.
+# 		To oprogramowanie jest dostarczone przez użytkownika Linux_Shines/Shiny “tak, jak jest”. Każda, dorozumiana lub bezpośrednio wyrażona gwarancja, nie wyłączając dorozumianej gwarancji przydatności handlowej i przydatności do określonego zastosowania, jest wyłączona.
+# 		W żadnym wypadku posiadacze praw autorskich nie mogą być odpowiedzialni za jakiekolwiek bezpośrednie, pośrednie, incydentalne, specjalne, uboczne i wtórne szkody (nie wyłączając obowiązku dostarczenia produktu zastępczego lub serwisu, odpowiedzialności z tytułu utraty walorów użytkowych, utraty danych lub korzyści a także przerw w pracy przedsiębiorstwa)
+# 		spowodowane w jakikolwiek sposób i na podstawie istniejącej w torii odpowiedzialności kontraktowej, całkowitej lub deliktowej (wynikłej zarówno z niedbalstwa jak innych postaci winy), powstałe w jakikolwiek sposób w wyniku używania lub mające związek z używaniem oprogramowania, nawet jeśli o możliwości powstania takich szkód ostrzeżono.
+				
 require "cgi"								# Moduł cgi wymagany przez bota
 require "cinch"								# Moduł cinch wymagany przez bota
 require "json"								# Moduł json wymagany przez bota
