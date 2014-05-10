@@ -55,7 +55,8 @@ REGEX__WOLFRAM   = /\A% (?<query>.*)\z/i 	# Sprawdza za pomocą wolframa różne
 if TESTING == true					
 	# Jeśli tak, wchodzi na kanał testowy:
 	CHANNEL_NAME  = BOT_PARSED["Config"]["TestChanName"]
-elsif TESTING == false					# Jeśli zdefiniowane wcześniej TESTING jest nieprawdziwe
+# Jeśli zdefiniowane wcześniej TESTING jest nieprawdziwe:
+elsif TESTING == false
 	# Wchodzi na zwykły kanał:
 	CHANNEL_NAME  = BOT_PARSED["Config"]["RealChanName"]
 # Koniec sprawdzenia:
@@ -133,14 +134,16 @@ bot = Cinch::Bot.new do
 	# Zakańcza daną funkcję
 	end
 	
-if AUTOREJOIN == true						# Jeżeli definicja AUTOREJOIN jest ustawiona na "true", funkcja poniżej wywoła się pomyślnie
+# Jeżeli definicja AUTOREJOIN jest ustawiona na "true", funkcja poniżej wywoła się pomyślnie:
+if AUTOREJOIN == true
 	# Określa to co ma się dziać, gdy bot zostanie wyrzucony
 	on :kick do
 		# Wysyła - za pomocą zmiennej globalnej bot - do kanału o zdefiniowanej wcześniej nazwie "CHANNEL_NAME" informację, że bot ma wejść
 		bot.Channel(CHANNEL_NAME).join
 	# Zakańcza daną funkcję
 	end
-end											# Kończy sprawdzanie, czy definicja AUTOREJOIN jest ustawiona na "true"
+# Kończy sprawdzanie, czy definicja AUTOREJOIN jest ustawiona na "true":
+end
 
 	# Określa to co ma się dziać po wysłaniu określonej wiadomości (:message) (w tym wypadku tą wiadomością jest wyrażenie regularne, zdefiniowane jako REGEX__GOOGLE) i tworzy nowe zmienne, "m" oraz "params". Zmienna "params" pozwala na przechwycenie zawartości tego, co zostało wpisane
 	on :message, REGEX__GOOGLE do |m, params|
@@ -157,13 +160,13 @@ end											# Kończy sprawdzanie, czy definicja AUTOREJOIN jest ustawiona na 
 				# user to użytkownik IRC, w tym wypadku bot
 				# to_s to konwersja do ciągu znaków
 				# downcase to konwersja całej zawartości na małe litery
-		# jest BOT_NAMEistratorem (do sprawdzenia służy definicja BOT_NAME)		
+		# jest administratorem (do sprawdzenia służy definicja BOT_NAME)		
 		if m.user.to_s.downcase == ADMIN_OF_BOT.downcase
 			# Tworzy nową zmienną zawierającą w sobie wyrażenie regularne REGEX__SAY, sprawdzające w zmiennej m (m.message) całą wiadomość [:msg]
 			msg = REGEX__SAY.match(m.message)[:msg]
 			# Wysyła - za pomocą zmiennej globalnej bot - do kanału o zdefiniowanej wcześniej nazwie (Channel(CHANNEL_NAME)) wiadomość ze zmiennej "msg" do wszystkich osób na kanale
 			bot.Channel(CHANNEL_NAME).msg msg
-		# Kończy sprawdzanie, czy użytkownik jest BOT_NAMEistratorem
+		# Kończy sprawdzanie, czy użytkownik jest administratorem
 		end
 	# Zakańcza funkcję wysyłającą wiadomość
 	end
