@@ -7,10 +7,10 @@
 	
 	"Config": {
 		"Autorejoin":		true, // Czy bot ma automatycznie dołączać po wyrzuceniu?
-		"Host":			"irc.pirc.pl", // Host serwera IRC
+		"Host":			"Host serwera IRC", // Host serwera IRC
 		"Port":			6667, // Port serwera IRC
-		"RealChanName": 	"#mirkofm", // Nazwa kanału do rozmów w formacie #kanał
-		"TestChanName": 	"#mirkofm", // Nazwa kanału do testowania w formacie #kanał
+		"RealChanName": 	"#kanał_do_rozmów", // Nazwa kanału do rozmów w formacie #kanał
+		"TestChanName": 	"#kanał_testowy", // Nazwa kanału do testowania w formacie #kanał
 		"Testing":		false // Czy bot ma służyć do testowania, czy do rozmowy?
 		
 	},
